@@ -1,0 +1,82 @@
+body {
+    background-color: #282d4f !important;
+}
+
+.main-div {
+    z-index: 1;
+    height: 100vh;
+    display: grid;
+    padding-top: 20px;
+    place-items: center;
+    grid-template-areas: 
+    "a a a a"
+    "a a a a"
+    "b b b b"
+    "b b b b";
+}
+
+.title-text {
+    grid-area: a;
+    color: white;
+    font-size: 60px;
+    text-align: center;
+    font-family: 'Graduate', cursive;
+    
+}
+
+.button-div {
+    grid-area: b;
+    align-self: start;
+}
+
+.center-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.download-button {
+    margin: 20px 0px;
+    position: relative;
+    display: inline-block;
+    color: white !important;
+    font-size: large !important;
+    padding: 5px 20px !important;
+    border-radius: 100px !important;
+    font-family: 'Raleway', sans-serif;
+    background-color: #69779b !important;
+    transition: all 1.0s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+    -webkit-transition: all 1.0s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+}
+
+.download-button::after {
+    top: 0;
+    left: 0;
+    opacity: 0;
+    content: "";
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 20px;
+    color: white !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    -webkit-transition: all 1.0s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+    transition: all 1.0s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+}
+
+.download-button:hover {
+    cursor: pointer;
+    transform: scale(1.1, 1.1);
+    box-shadow: 3px 3px 8px #46b5d1;
+}
+
+.download-button:hover::after {
+      opacity: 1;
+}
+
+#particles-js {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: fixed !important;
+}
